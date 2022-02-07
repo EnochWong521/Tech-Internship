@@ -15,8 +15,6 @@ def main(session):
 
     tts.setLanguage("English")
     
-    # Say Emile in english
-    
     tts.say("Hi. My name is Pepper.")
     
     posture_service = session.service("ALRobotPosture")
@@ -54,10 +52,10 @@ if __name__ == "__main__":
 
 
 #say hello
-Play robot-themed song
-Do robot dance
-Move hands and body:
-Move left and right hand incrementally
-Make right angle using both arms and flip them up and down
-Say "Hello my name is Pepper"
-Print "Hello my name is Pepper"
+#Play robot-themed song
+#Do robot dance
+#Move hands and body:
+#Move left and right hand incrementally
+#Make right angle using both arms and flip them up and down
+#Say "Hello my name is Pepper"
+#Print "Hello my name is Pepper"
