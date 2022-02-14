@@ -43,8 +43,6 @@ def main(session):
     motion_service.angleInterpolation(names, angleLists, times, isAbsolute)
     time.sleep(1.0)
 
-    motion_service.rest()
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
