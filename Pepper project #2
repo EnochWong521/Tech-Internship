@@ -2,16 +2,15 @@ import qi
 import argparse
 import sys
 import time
-import almath
 
 def main(session):
 
-#Speak
 tts = session.service("ALTextToSpeech")
+motion_service  = session.service("ALMotion")
+
+#Speak
 tts.setLanguage("English")
 tts.say("I am a robot")
-
-motion_service  = session.service("ALMotion")
 
 #set forearm to optimal position
 names = ["LElbowYaw","RElbowYaw","LShoulderRoll","RShoulderRoll"]
