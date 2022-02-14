@@ -11,40 +11,42 @@ tts = session.service("ALTextToSpeech")
 tts.setLanguage("English")
 tts.say("I am a robot")
 
+motion_service  = session.service("ALMotion")
+
 #set forearm to optimal position
 names = ["LElbowYaw","RElbowYaw","LShoulderRoll","RShoulderRoll"]
 angleLists = [-1.57,1.57,0.5,-0.5]
 times = 1.0
 isAbsolute = True
-proxy.angleInterpolation(names, angleLists, times, isAbsolute)
+motion_service.angleInterpolation(names, angleLists, times, isAbsolute)
 
 #Move left arm
 names = ["LElbowRoll","LShoulderPitch","HeadYaw","HeadPitch"]
 angleLists = [0.79,-0.79,1.0,0.6]
 times = 1.0
 isAbsolute = True
-proxy.angleInterpolation(names, angleLists, times, isAbsolute)
+motion_service.angleInterpolation(names, angleLists, times, isAbsolute)
 
 #Move right arm
 names = ["RElbowRoll","RShoulderPitch","HeadYaw","HeadPitch"]
 angleLists = [0.79,-0.79,-1.0,0.6]
 times = 1.0
 isAbsolute = True
-proxy.angleInterpolation(names, angleLists, times, isAbsolute)
+motion_service.angleInterpolation(names, angleLists, times, isAbsolute)
 
 #Move left arm more
 names = ["LElbowRoll","LShoulderPitch","HeadYaw","HeadPitch"]
 angleLists = [1.55,-1.55,-0.5,0.6,0.35]
 times = 1.0
 isAbsolute = True
-proxy.angleInterpolation(names, angleLists, times, isAbsolute)
+motion_service.angleInterpolation(names, angleLists, times, isAbsolute)
 
 #Move right arm more
 names = ["RElbowRoll","RShoulderPitch","HeadYaw","HeadPitch"]
 angleLists = [1.55,-1.55,-0.5,-0.6,0.0]
 times = 1.0
 isAbsolute = True
-proxy.angleInterpolation(names, angleLists, times, isAbsolute)
+motion_service.angleInterpolation(names, angleLists, times, isAbsolute)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
